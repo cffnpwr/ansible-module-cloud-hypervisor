@@ -1,0 +1,30 @@
+{
+  "name": "Ansible module for Cloud Hypervisor",
+  "dockerFile": "./Dockerfile",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": "uv sync",
+  "mounts": [
+    {
+      "source": "/dev/kvm",
+      "target": "/dev/kvm",
+      "type": "bind"
+    }
+  ],
+  "overrideCommand": false,
+  "privileged": true,
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "eamodio.gitlens",
+        "EditorConfig.EditorConfig",
+        "DavidAnson.vscode-markdownlint",
+        "redhat.ansible",
+        "yzhang.markdown-all-in-one",
+        "samuelcolvin.jinjahtml",
+        "tamasfe.even-better-toml"
+      ]
+    }
+  }
+}
+
